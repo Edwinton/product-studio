@@ -1,0 +1,114 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Carousel · Product Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="settings.js" defer></script>
+  <script src="nav.js" defer></script>
+  <script src="carousel.js" defer></script>
+  <script src="effects.js" defer></script>`n</head>
+<body data-page="carousel">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-controls="sidebar" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+  <div class="brand"><span class="logo">PS</span><span>Product Studio</span></div>
+  <button class="icon-btn" id="settingsBtn" aria-controls="settingsDrawer" aria-expanded="false" aria-label="Open settings">&#9881;</button>
+</header>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="sidebar" id="sidebar" aria-label="Primary">
+  <div class="brand"><span class="logo">PS</span><div><strong>Product Studio</strong><small>Candidate submission · 2026</small></div></div>
+  <nav>
+    <a href="index.html" data-page="overview"><span>Overview</span></a>
+    <a href="practo.html" data-page="practo"><span>Practo for Animals</span><small>01</small></a>
+    <a href="education.html" data-page="education"><span>AI Education</span><small>02</small></a>
+    <a href="carousel.html" data-page="carousel"><span>AI Carousel</span><small>03</small></a>
+    <a href="workflow.html" data-page="workflow"><span>AI Workflow</span><small>04</small></a>
+  </nav>
+  <p class="side-foot">Demo content only.</p>
+</aside>
+
+<div class="settings-scrim" id="settingsScrim" hidden></div>
+<aside class="settings-drawer" id="settingsDrawer" aria-label="Display settings" aria-hidden="true">
+  <div class="settings-head"><h2>Display settings</h2><button class="link-btn" data-settings-close>Close</button></div>
+  <p class="muted small">Saved to this browser.</p>
+  <div class="setting"><label for="sTheme">Theme</label>
+    <select id="sTheme" data-setting="theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+  <div class="setting"><label for="sAccent">Accent colour</label>
+    <select id="sAccent" data-setting="accent"><option value="section">Per-section</option><option value="indigo">Indigo</option><option value="emerald">Emerald</option><option value="violet">Violet</option><option value="coral">Coral</option><option value="blue">Blue</option></select></div>
+  <div class="setting"><label for="sDensity">Density</label>
+    <select id="sDensity" data-setting="density"><option value="comfortable">Comfortable</option><option value="compact">Compact</option></select></div>
+  <div class="setting"><label for="sRadius">Corner radius</label>
+    <select id="sRadius" data-setting="radius"><option value="round">Rounded</option><option value="sharp">Sharp</option></select></div>
+  <div class="setting"><label for="sFontSize">Base font size</label>
+    <select id="sFontSize" data-setting="fontSize"><option value="sm">Small</option><option value="md">Medium</option><option value="lg">Large</option></select></div>
+  <div class="setting"><label class="toggle"><input type="checkbox" data-setting="motion" id="sMotion"> <span>Reduce motion</span></label></div>
+  <div class="setting"><label class="toggle"><input type="checkbox" data-setting="showHints" id="sHints"> <span>Show helper hints</span></label></div>
+  <button class="btn ghost full" data-settings-reset>Reset to defaults</button>
+</aside>
+
+<main id="main">
+  <p class="eyebrow">AI-generated carousel · Task 3</p>
+  <h1>“5 Prompt Patterns That Actually Work”</h1>
+  <p class="lead">A 7-slide educational carousel. Use arrow keys, buttons or the dots to move through it.</p>
+
+  <div class="carousel-layout">
+    <div>
+      <div class="carousel">
+        <div class="slide-frame" id="slideFrame" aria-live="polite"></div>
+      </div>
+      <div class="carousel-nav">
+        <button class="btn ghost" id="prevSlide" type="button">← Prev</button>
+        <div class="dots" id="dots" role="group" aria-label="Choose slide"></div>
+        <button class="btn" id="nextSlide" type="button">Next →</button>
+      </div>
+      <p class="muted small center" id="slideCount"></p>
+    </div>
+
+    <aside class="carousel-side">
+      <div class="card">
+        <h3>Caption</h3>
+        <p class="small caption" id="caption"></p>
+        <button class="btn ghost" id="copyCaption" type="button">Copy caption</button>
+        <span class="muted small" id="copyMsg" role="status"></span>
+      </div>
+      <div class="card">
+        <h3>Brand kit</h3>
+        <div class="swatches">
+          <span style="background:#141a2b"></span>
+          <span style="background:#f0573c"></span>
+          <span style="background:#fff7f4;border:1px solid #e3e7f0"></span>
+          <span style="background:#2f6fe4"></span>
+        </div>
+        <p class="muted small">Inter, 700/400. 1080×1080 or 1080×1350. Max 7 slides.</p>
+      </div>
+      <div class="card">
+        <h3>Pre-publish checklist</h3>
+        <ul class="check">
+          <li>Facts checked</li><li>Examples tested</li><li>Alt text added</li><li>Headline readable</li><li>One CTA on the last slide</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<template id="tpl-slide">
+  <div class="slide">
+    <div>
+      <div class="s-kicker"></div>
+      <h4></h4>
+      <p></p>
+      <div class="s-ex" hidden></div>
+    </div>
+    <div class="s-foot"><span class="s-brand">Product Studio</span><span class="s-count"></span></div>
+  </div>
+</template>
+</body>
+</html>
+
+
+

@@ -1,0 +1,113 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Workflow · Product Studio</title>
+  <meta name="description" content="The AI workflow for creating Instagram and LinkedIn carousels independently.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="settings.js" defer></script>
+  <script src="nav.js" defer></script>
+  <script src="effects.js" defer></script>
+</head>
+<body data-page="workflow">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-controls="sidebar" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+  <div class="brand"><span class="logo">PS</span><span>Product Studio</span></div>
+  <button class="icon-btn" id="settingsBtn" aria-controls="settingsDrawer" aria-expanded="false" aria-label="Open settings">&#9881;</button>
+</header>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="sidebar" id="sidebar" aria-label="Primary">
+  <div class="brand"><span class="logo">PS</span><div><strong>Product Studio</strong><small>Candidate submission · 2026</small></div></div>
+  <nav>
+    <a href="index.html" data-page="overview"><span>Overview</span></a>
+    <a href="practo.html" data-page="practo"><span>Practo for Animals</span><small>01</small></a>
+    <a href="education.html" data-page="education"><span>AI Education</span><small>02</small></a>
+    <a href="carousel.html" data-page="carousel"><span>AI Carousel</span><small>03</small></a>
+    <a href="workflow.html" data-page="workflow"><span>AI Workflow</span><small>04</small></a>
+  </nav>
+  <p class="side-foot">Demo content only. Business names, contacts and testimonials are placeholders.</p>
+</aside>
+
+<div class="settings-scrim" id="settingsScrim" hidden></div>
+<aside class="settings-drawer" id="settingsDrawer" aria-label="Display settings" aria-hidden="true">
+  <div class="settings-head"><h2>Display settings</h2><button class="link-btn" data-settings-close>Close</button></div>
+  <p class="muted small">Saved to this browser.</p>
+  <div class="setting"><label for="sTheme">Theme</label>
+    <select id="sTheme" data-setting="theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+  <div class="setting"><label for="sAccent">Accent colour</label>
+    <select id="sAccent" data-setting="accent"><option value="section">Per-section</option><option value="indigo">Indigo</option><option value="emerald">Emerald</option><option value="violet">Violet</option><option value="coral">Coral</option><option value="blue">Blue</option></select></div>
+  <div class="setting"><label for="sDensity">Density</label>
+    <select id="sDensity" data-setting="density"><option value="comfortable">Comfortable</option><option value="compact">Compact</option></select></div>
+  <div class="setting"><label for="sRadius">Corner radius</label>
+    <select id="sRadius" data-setting="radius"><option value="round">Rounded</option><option value="sharp">Sharp</option></select></div>
+  <div class="setting"><label for="sFontSize">Base font size</label>
+    <select id="sFontSize" data-setting="fontSize"><option value="sm">Small</option><option value="md">Medium</option><option value="lg">Large</option></select></div>
+  <div class="setting"><label class="toggle"><input type="checkbox" data-setting="motion" id="sMotion"> <span>Reduce motion</span></label></div>
+  <div class="setting"><label class="toggle"><input type="checkbox" data-setting="showHints" id="sHints"> <span>Show helper hints</span></label></div>
+  <button class="btn ghost full" data-settings-reset>Reset to defaults</button>
+</aside>
+
+<main id="main">
+  <p class="eyebrow">AI content creation system · Task 3</p>
+  <h1>From raw idea to publish-ready carousel in under an hour</h1>
+  <p class="lead">A repeatable pipeline that lets the founder produce carousels alone. AI does the research, structuring, copy and layout. The founder makes the decisions that matter: the angle, the facts and the final sign-off.</p>
+
+  <h2>The pipeline</h2>
+  <ol class="pipeline" aria-label="Six-stage workflow">
+    <li class="stage"><span class="stage-n">1</span><h3>Capture idea</h3><p class="muted small">Founder drops a raw note into a form or chat.</p><span class="tool">Google Form / Notion</span></li>
+    <li class="stage"><span class="stage-n">2</span><h3>Research &amp; structure</h3><p class="muted small">AI pulls sources and outlines 5 to 7 slides.</p><span class="tool">Claude + web search</span></li>
+    <li class="stage"><span class="stage-n">3</span><h3>Copy &amp; headlines</h3><p class="muted small">Headlines and slide copy, with 3 options each.</p><span class="tool">Claude / ChatGPT</span></li>
+    <li class="stage human"><span class="stage-n">✓</span><h3>Founder checkpoint</h3><p class="muted small">Pick the angle, check facts, approve the copy.</p><span class="tool">Human review</span></li>
+    <li class="stage"><span class="stage-n">4</span><h3>Layout &amp; visuals</h3><p class="muted small">Brand template fills with approved copy.</p><span class="tool">Canva brand kit / Figma</span></li>
+    <li class="stage"><span class="stage-n">5</span><h3>Export &amp; schedule</h3><p class="muted small">Slides export as PNG or PDF and queue to the calendar.</p><span class="tool">Make / n8n + Buffer</span></li>
+  </ol>
+
+  <h2>Tool stack and why</h2>
+  <div class="card table-wrap">
+    <table>
+      <thead><tr><th>Stage</th><th>Primary tool</th><th>Alternative</th><th>Why this choice</th></tr></thead>
+      <tbody>
+        <tr><td>Research &amp; copy</td><td>Claude</td><td>ChatGPT, Gemini</td><td>Strong at long-form structure and tone control</td></tr>
+        <tr><td>Layout</td><td>Canva (brand kit)</td><td>Figma, Lovable</td><td>Non-designers can edit templates safely</td></tr>
+        <tr><td>Automation</td><td>Make</td><td>n8n, Zapier</td><td>Visual scenarios and a generous free tier</td></tr>
+        <tr><td>Capture &amp; storage</td><td>Notion or Google Sheets</td><td>Airtable</td><td>Zero setup, searchable idea backlog</td></tr>
+        <tr><td>Scheduling</td><td>Buffer or Later</td><td>Meta Business Suite</td><td>One queue for Instagram and LinkedIn</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Automation scenario (Make)</h2>
+  <div class="card scenario">
+    <div class="sc-node"><b>Trigger</b><span>New row in “Ideas” sheet with status = Approved</span></div>
+    <div class="sc-arrow">↓</div>
+    <div class="sc-node"><b>AI module</b><span>Send idea to Claude: research outline, 5–7 slides, JSON output</span></div>
+    <div class="sc-arrow">↓</div>
+    <div class="sc-node"><b>Router</b><span>If Instagram: 1080 × 1080. If LinkedIn: 1080 × 1350</span></div>
+    <div class="sc-arrow">↓</div>
+    <div class="sc-node human-node"><b>Human approval</b><span>Slack message with draft; founder clicks Approve or Edit</span></div>
+    <div class="sc-arrow">↓</div>
+    <div class="sc-node"><b>Canva + queue</b><span>Generate slides from template, export PNG, add to scheduler</span></div>
+  </div>
+
+  <h2>Design principles</h2>
+  <div class="grid g3">
+    <div class="card"><h3>Human at the decision points</h3><p class="muted small">AI proposes; the founder chooses the angle and approves facts. This protects brand trust.</p></div>
+    <div class="card"><h3>Templates before prompts</h3><p class="muted small">A fixed brand kit keeps every carousel consistent, so quality doesn’t depend on prompt wording.</p></div>
+    <div class="card"><h3>Repeatable by design</h3><p class="muted small">Each run stores its outline, copy and export in one folder, so any post can be redone in minutes.</p></div>
+  </div>
+
+  <div class="cta-band">
+    <div>
+      <h3>Want this system running for your brand?</h3>
+      <p class="small">Start with the scenario above. Once the first three carousels ship, add analytics and a monthly topic planner.</p>
+    </div>
+    <a class="btn" href="carousel.html">See the sample carousel</a>
+  </div>
+</main>
+</body>
+</html>

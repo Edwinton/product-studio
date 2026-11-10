@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview · Product Studio</title>
+  <meta name="description" content="Product Studio: MVP design, course landing page, AI carousel system and workflow.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="settings.js" defer></script>
+  <script src="nav.js" defer></script>
+  <script src="effects.js" defer></script>
+</head>
+<body data-page="overview">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-controls="sidebar" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+  <div class="brand"><span class="logo">PS</span><span>Product Studio</span></div>
+  <button class="icon-btn" id="settingsBtn" aria-controls="settingsDrawer" aria-expanded="false" aria-label="Open settings">&#9881;</button>
+</header>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="sidebar" id="sidebar" aria-label="Primary">
+  <div class="brand"><span class="logo">PS</span><div><strong>Product Studio</strong><small>Candidate submission · 2026</small></div></div>
+  <nav>
+    <a href="index.html" data-page="overview"><span>Overview</span></a>
+    <a href="practo.html" data-page="practo"><span>Practo for Animals</span><small>01</small></a>
+    <a href="education.html" data-page="education"><span>AI Education</span><small>02</small></a>
+    <a href="carousel.html" data-page="carousel"><span>AI Carousel</span><small>03</small></a>
+    <a href="workflow.html" data-page="workflow"><span>AI Workflow</span><small>04</small></a>
+  </nav>
+  <p class="side-foot">Demo content only. Business names, contacts and testimonials are placeholders.</p>
+</aside>
+
+<div class="settings-scrim" id="settingsScrim" hidden></div>
+<aside class="settings-drawer" id="settingsDrawer" aria-label="Display settings" aria-hidden="true">
+  <div class="settings-head"><h2>Display settings</h2><button class="link-btn" data-settings-close>Close</button></div>
+  <p class="muted small">Saved to this browser.</p>
+  <div class="setting"><label for="sTheme">Theme</label>
+    <select id="sTheme" data-setting="theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+  <div class="setting"><label for="sAccent">Accent colour</label>
+    <select id="sAccent" data-setting="accent"><option value="section">Per-section</option><option value="indigo">Indigo</option><option value="emerald">Emerald</option><option value="violet">Violet</option><option value="coral">Coral</option><option value="blue">Blue</option></select></div>
+  <div class="setting"><label for="sDensity">Density</label>
+    <select id="sDensity" data-setting="density"><option value="comfortable">Comfortable</option><option value="compact">Compact</option></select></div>
+  <div class="setting"><label for="sRadius">Corner radius</label>
+    <select id="sRadius" data-setting="radius"><option value="round">Rounded</option><option value="sharp">Sharp</option></select></div>
+  <div class="setting"><label for="sFontSize">Base font size</label>
+    <select id="sFontSize" data-setting="fontSize"><option value="sm">Small</option><option value="md">Medium</option><option value="lg">Large</option></select></div>
+  <div class="setting"><label class="toggle"><input type="checkbox" data-setting="motion" id="sMotion"> <span>Reduce motion</span></label></div>
+  <div class="setting"><label class="toggle"><input type="checkbox" data-setting="showHints" id="sHints"> <span>Show helper hints</span></label></div>
+  <button class="btn ghost full" data-settings-reset>Reset to defaults</button>
+</aside>
+
+<main id="main">
+  <section class="hero hero-overview">
+    <p class="eyebrow">Product Development, Design &amp; AI Systems</p>
+    <h1>Turning a rough idea into a polished, shippable product system</h1>
+    <p class="hero-lead">A collection of three deliverables built as one cohesive product studio: a discovery MVP for animal care, a conversion-focused AI course page, and a repeatable system for creating social carousels with AI.</p>
+    <div class="hero-actions">
+      <a class="btn light" href="practo.html">Open Practo for Animals</a>
+      <a class="btn ghost-light" href="carousel.html">See the carousel</a>
+      <a class="btn ghost-light" href="workflow.html">View the workflow</a>
+    </div>
+  </section>
+
+  <h2>Deliverables</h2>
+  <div class="grid g3">
+    <a class="card deliv" href="practo.html">
+      <span class="tag">Task 1</span>
+      <h3>Practo for Animals MVP</h3>
+      <p class="muted">Search and discovery with working filters, provider cards and four key CTAs.</p>
+      <span class="more">Open prototype →</span>
+    </a>
+    <a class="card deliv" href="education.html">
+      <span class="tag">Task 2</span>
+      <h3>AI Education landing page</h3>
+      <p class="muted">Value proposition, four programmes, enrolment journey and validated lead form.</p>
+      <span class="more">Open landing page →</span>
+    </a>
+    <a class="card deliv" href="carousel.html">
+      <span class="tag">Task 3</span>
+      <h3>AI carousel + workflow</h3>
+      <p class="muted">A 7-slide carousel plus the six-stage pipeline, tool stack and automation scenario.</p>
+      <span class="more">Open carousel →</span>
+    </a>
+  </div>
+
+  <h2>Try the settings</h2>
+  <div class="card">
+    <p class="muted small" data-hint>Use the ⚙ button in the top bar to change theme, accent, density, radius and motion. Preferences persist across pages in this browser.</p>
+    <button class="btn" type="button" id="openSettings">Open settings</button>
+  </div>
+</main>
+
+<script>
+  document.getElementById("openSettings")?.addEventListener("click", () => {
+    document.getElementById("settingsBtn")?.click();
+  });
+</script>
+</body>
+</html>

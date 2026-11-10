@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Education · Product Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="settings.js" defer></script>
+  <script src="nav.js" defer></script>
+  <script src="education.js" defer></script>
+  <script src="effects.js" defer></script>`n</head>
+<body data-page="education">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <button class="menu-btn" id="menuBtn" aria-controls="sidebar" aria-expanded="false" aria-label="Open navigation"><span></span><span></span><span></span></button>
+  <div class="brand"><span class="logo">PS</span><span>Product Studio</span></div>
+  <button class="icon-btn" id="settingsBtn" aria-controls="settingsDrawer" aria-expanded="false" aria-label="Open settings">&#9881;</button>
+</header>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="sidebar" id="sidebar" aria-label="Primary">
+  <div class="brand"><span class="logo">PS</span><div><strong>Product Studio</strong><small>Candidate submission · 2026</small></div></div>
+  <nav>
+    <a href="index.html" data-page="overview"><span>Overview</span></a>
+    <a href="practo.html" data-page="practo"><span>Practo for Animals</span><small>01</small></a>
+    <a href="education.html" data-page="education"><span>AI Education</span><small>02</small></a>
+    <a href="carousel.html" data-page="carousel"><span>AI Carousel</span><small>03</small></a>
+    <a href="workflow.html" data-page="workflow"><span>AI Workflow</span><small>04</small></a>
+  </nav>
+  <p class="side-foot">Demo content only.</p>
+</aside>
+
+<div class="settings-scrim" id="settingsScrim" hidden></div>
+<aside class="settings-drawer" id="settingsDrawer" aria-label="Display settings" aria-hidden="true">
+  <div class="settings-head"><h2>Display settings</h2><button class="link-btn" data-settings-close>Close</button></div>
+  <p class="muted small">Saved to this browser.</p>
+  <div class="setting"><label for="sTheme">Theme</label>
+    <select id="sTheme" data-setting="theme"><option value="auto">Auto</option><option value="light">Light</option><option value="dark">Dark</option></select></div>
+  <div class="setting"><label for="sAccent">Accent colour</label>
+    <select id="sAccent" data-setting="accent"><option value="section">Per-section</option><option value="indigo">Indigo</option><option value="emerald">Emerald</option><option value="violet">Violet</option><option value="coral">Coral</option><option value="blue">Blue</option></select></div>
+  <div class="setting"><label for="sDensity">Density</label>
+    <select id="sDensity" data-setting="density"><option value="comfortable">Comfortable</option><option value="compact">Compact</option></select></div>
+  <div class="setting"><label for="sRadius">Corner radius</label>
+    <select id="sRadius" data-setting="radius"><option value="round">Rounded</option><option value="sharp">Sharp</option></select></div>
+  <div class="setting"><label for="sFontSize">Base font size</label>
+    <select id="sFontSize" data-setting="fontSize"><option value="sm">Small</option><option value="md">Medium</option><option value="lg">Large</option></select></div>
+  <div class="setting"><label class="toggle"><input type="checkbox" data-setting="motion" id="sMotion"> <span>Reduce motion</span></label></div>
+  <div class="setting"><label class="toggle"><input type="checkbox" data-setting="showHints" id="sHints"> <span>Show helper hints</span></label></div>
+  <button class="btn ghost full" data-settings-reset>Reset to defaults</button>
+</aside>
+
+<main id="main">
+  <section class="hero hero-edu">
+    <div class="hero-copy">
+      <p class="eyebrow">Practical AI &amp; digital skills</p>
+      <h1>Learn to build with AI. Ship real work in six weeks.</h1>
+      <p class="hero-lead">Hands-on programmes for students and young professionals.</p>
+      <div class="hero-actions">
+        <a class="btn light" href="#enrol">Enquire now</a>
+        <a class="btn ghost-light" href="#programmes">View programmes</a>
+      </div>
+      <p class="fine" data-hint>Figures and testimonials are placeholders for the demo.</p>
+    </div>
+    <ul class="edu-stats" aria-label="Key figures">
+      <li><b>6</b><span>weeks part-time</span></li>
+      <li><b>4</b><span>tracks</span></li>
+      <li><b>12</b><span>projects</span></li>
+      <li><b>1:20</b><span>mentor ratio</span></li>
+    </ul>
+  </section>
+
+  <h2 id="programmes">Programmes</h2>
+  <div class="grid g2 programmes" id="programmeGrid"></div>
+
+  <h2>Your enrolment journey</h2>
+  <ol class="journey">
+    <li><span>1</span><div><h3>Enquire</h3><p class="muted small">Pick a track.</p></div></li>
+    <li><span>2</span><div><h3>Free counselling</h3><p class="muted small">20-minute call.</p></div></li>
+    <li><span>3</span><div><h3>Reserve seat</h3><p class="muted small">Deposit or instalments.</p></div></li>
+    <li><span>4</span><div><h3>Enrol &amp; onboard</h3><p class="muted small">Tool access + first module.</p></div></li>
+  </ol>
+
+  <h2 id="enrol">Enquire and reserve a seat</h2>
+  <div class="grid enrol-grid">
+    <div class="card enrol-side">
+      <h3>What happens next</h3>
+      <p class="muted small">We reply within one working day.</p>
+      <ul class="ticks"><li>Free 20-min counselling</li><li>Scholarships available</li><li>7-day refund</li></ul>
+    </div>
+    <form class="card form" id="enrolForm" novalidate>
+      <div class="field"><label for="eName">Full name</label><input id="eName" autocomplete="name" required><p class="err" id="eNameErr"></p></div>
+      <div class="form-2">
+        <div class="field"><label for="eEmail">Email</label><input id="eEmail" type="email" autocomplete="email" required><p class="err" id="eEmailErr"></p></div>
+        <div class="field"><label for="ePhone">WhatsApp</label><input id="ePhone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit" required><p class="err" id="ePhoneErr"></p></div>
+      </div>
+      <div class="field"><label for="eTrack">Track</label>
+        <select id="eTrack" required>
+          <option value="">Choose a track</option>
+          <option>AI Foundations</option>
+          <option>AI for Digital Marketing</option>
+          <option>No-Code Automation with AI</option>
+          <option>Applied AI Product Sprints</option>
+        </select>
+        <p class="err" id="eTrackErr"></p>
+      </div>
+      <div class="field"><label for="eGoal">Goal <span class="muted">(optional)</span></label><textarea id="eGoal" rows="2"></textarea></div>
+      <label class="toggle"><input type="checkbox" id="eConsent"> <span>I agree to be contacted.</span></label>
+      <p class="err" id="eConsentErr"></p>
+      <button class="btn full" type="submit">Request callback</button>
+      <div class="ok" id="enrolOk" hidden role="status">
+        <b>Thanks, we’ve got your enquiry.</b>
+        <p class="small">Demo mode: nothing was sent.</p>
+      </div>
+    </form>
+  </div>
+</main>
+
+<template id="tpl-programme">
+  <article class="card prog">
+    <div class="prog-top"><span class="tag p-tag"></span><span class="muted small p-meta"></span></div>
+    <h3 class="p-title"></h3>
+    <p class="muted small p-desc"></p>
+    <ul class="ticks p-list"></ul>
+    <div class="prog-foot"><b class="p-price"></b><button class="btn ghost p-btn" type="button">Enquire</button></div>
+  </article>
+</template>
+</body>
+</html>
+
+
