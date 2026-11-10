@@ -358,3 +358,32 @@ html[data-theme="dark"] .btn.light {
 .hero::after {
   z-index: 0;
 }
+
+/* ============================================================
+   FINAL GITHUB-PUSH POLISH
+   ============================================================ */
+
+/* 1. Ensure the light button is visible on the dark hero */
+html[data-theme="dark"] .btn.light,
+html[data-theme="auto"] .btn.light {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+html[data-theme="dark"] .btn.light:hover,
+html[data-theme="auto"] .btn.light:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* 2. Fix the "Open settings" button in dark mode */
+html[data-theme="dark"] #openSettings {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* 3. Ensure the tag text inside cards is readable */
+html[data-theme="dark"] .tag {
+  background: rgba(139, 123, 255, 0.15) !important;
+  color: #c4b5fd !important;
+}
